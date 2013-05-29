@@ -7,7 +7,6 @@ for line in `cat /etc/vpnc/fuckgfw.txt`
 do
   if [[ ${line:0:1} != "#" ]] ;then
   ip rule add to $line table vpn
-  else
-  echo ""
+  else :
   fi
 done
